@@ -10,95 +10,107 @@ body {
   height: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  cursor: none;
 }
 
 main {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #c4edef;
-  flex-direction: column;
-  gap: 30px;
+  background-color: #121212;
+  padding: 20px;
+  color: white;
 }
-h1 {
-  font-size: 50px;
-}
-button {
-  border: none;
-}
-
-.piano {
-  height: 400px;
-  width: 98%;
+section {
+  height: 100%;
+  width: 350px;
   background-color: black;
   border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-  cursor: none;
+  margin: auto;
 }
 
-.keys {
+.all-reels {
   width: 100%;
-  height: 70%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+.reel {
   position: relative;
-}
-.key {
-  height: 100%;
-  width: 3.5%;
-  border-radius: 4px;
-  cursor: pointer;
-  cursor: none;
-}
-
-.whites {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+
+.reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.reel .bottom {
+  padding: 30px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.853));
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom .user {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.36%;
+  gap: 10px;
 }
 
-.whites .w-key {
-  background-color: white;
+.bottom .user img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.w-key {
-  padding-top: 50px;
-}
-.blacks {
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  gap: 4.2%;
+.bottom .user h4 {
+  font-weight: 500;
+  font-size: 15px;
 }
 
-.blacks .b-key {
-  background-color: black;
+.bottom .user button {
+  background-color: transparent;
   color: white;
-  z-index: 10;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.bottom > h3 {
+  font-weight: 500;
+  font-size: 20px;
 }
 
-.b-key:active {
-  background-color: rgb(43, 43, 43);
-  transform: scale(0.98);
-}
-.w-key:active {
-  background-color: rgb(226, 222, 222);
-  transform: scale(0.98);
+.right {
+  position: absolute;
+  right: 12%;
+  transform: translateX(100%);
+  bottom: 16%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
 }
 
-.cursor {
-  position: fixed;
-  width: 34px;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-  pointer-events: none;
+.right i {
+  font-size: 25px;
+  font-weight: 500;
+}
+.right .red {
+  color: red;
+}
+
+.right h6 {
+  font-size: 18px;
+  font-weight: 500;
 }

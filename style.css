@@ -8,42 +8,65 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  cursor: none;
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-:root {
-  --x: 400px;
-  --y: 400px;
+@property --borderAngle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
+
+@keyframes animateBorder {
+  from {
+    --borderAngle: 0deg;
+  }
+  to {
+    --borderAngle: 360deg;
+  }
+}
+
 main {
-  position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
-}
-main video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(
-    150px at var(--x) var(--y),
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.951)
-  );
+.box {
+  width: 300px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
 }
 
-.cursor {
-  position: absolute;
-  width: 50px;
-  transform: translate(-50%, -50%);
-  top: 0;
-  left: 0;
-  filter: invert();
+.box img {
+  width: 250px;
+}
+
+.box h3 {
+  font-size: 1.6rem;
+}
+.box p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box:hover {
+  background: linear-gradient(black) content-box,
+    conic-gradient(from var(--borderAngle), red, black, black, rgb(255, 17, 60))
+      border-box;
+  animation: animateBorder 2s linear infinite;
+  box-shadow: 0 0 50px rgb(255, 17, 60);
+  color: rgb(255, 17, 60);
 }

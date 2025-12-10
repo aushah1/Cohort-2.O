@@ -1,62 +1,50 @@
-// // Exercise 1
-// function afterDelay(time, cb) {
-//   setTimeout(() => {
-//     cb();
-//   }, time);
-// }
-
-// afterDelay(2000, () => {
-//   console.log("Callback executed");
-// });
-
-// // Exercise 2
-
-// function getUser(username, cb) {
-//   setTimeout(() => {
-//     cb({ id: 143, username: "Aushah" });
-//   }, 1000);
-// }
-
-// function getUserPosts(userId, cb) {
-//   setTimeout(() => {
-//     cb(["img1", "img2", "img3"]);
-//   }, 1000);
-// }
-
-// getUser("Aushah", (data) => {
-//   getUserPosts(data.id, (posts) => {
-//     console.log(data.username, posts);
-//   });
-// });
-
-// Exercise 3
-
-function loginUser(username, cb) {
-  console.log("Getting User.....");
-
-  setTimeout(() => {
-    cb({ username: "Aushah", id: 342 });
-  }, 1000);
-}
-function fetchPermissions(id, cb) {
-  console.log("Getting Permissions.....");
-
-  setTimeout(() => {
-    cb(["true", "false"]);
-  }, 1000);
-}
-function loadDashboard(permissions, cb) {
-  console.log("Loading Dashboard.....");
-
-  setTimeout(() => {
-    cb("Dashboard Loaded");
-  }, 1000);
-}
-
-loginUser("Aushsh", (data) => {
-  fetchPermissions(data.id, (permissions) => {
-    loadDashboard(permissions, (permission) => {
-      console.log(permission);
-    });
+let menu = document.querySelector(".menu");
+let img = document.querySelector(".battery");
+let time = document.querySelector(".time");
+let date = document.querySelector(".date");
+let start = document.querySelector(".start");
+let container = document.querySelector(".container");
+navigator.getBattery().then((battery) => {
+  battery.charging
+    ? (img.src = "/assets/battery-on.png")
+    : (img.src = "/assets/battery-off.png");
+  battery.addEventListener("chargingchange", () => {
+    battery.charging
+      ? (img.src = "/assets/battery-on.png")
+      : (img.src = "/assets/battery-off.png");
   });
+});
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  menu.style.top = e.clientY + "px";
+  menu.style.left = e.clientX + "px";
+  menu.style.display = "block";
+});
+document.addEventListener("click", () => {
+  menu.style.display = "none";
+});
+
+function showDateTime() {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  let hours = now.getHours();
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+
+  time.innerHTML = `${hours}:${minutes} ${ampm}`;
+  date.innerHTML = `${day}-${month}-${year}`;
+}
+
+showDateTime();
+setInterval(showDateTime, 1000);
+
+start.addEventListener("click", () => {
+  container.style.display =
+    container.style.display === "block" ? "none" : "block";
 });

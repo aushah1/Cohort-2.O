@@ -4,6 +4,9 @@ let time = document.querySelector(".time");
 let date = document.querySelector(".date");
 let start = document.querySelector(".start");
 let container = document.querySelector(".container");
+let newFolder = document.querySelector(".new");
+let refresh = document.querySelector(".refresh");
+let left = document.querySelector(".left");
 navigator.getBattery().then((battery) => {
   battery.charging
     ? (img.src = "/assets/battery-on.png")
@@ -22,6 +25,7 @@ document.addEventListener("contextmenu", (e) => {
 });
 document.addEventListener("click", () => {
   menu.style.display = "none";
+  container.style.display = "none";
 });
 
 function showDateTime() {
@@ -47,4 +51,19 @@ setInterval(showDateTime, 1000);
 start.addEventListener("click", () => {
   container.style.display =
     container.style.display === "block" ? "none" : "block";
+});
+refresh.addEventListener("click", () => {
+  location.reload();
+});
+let count = 1;
+newFolder.addEventListener("click", () => {
+  let item = document.createElement("div");
+  item.className = "item";
+  item.innerHTML = ` 
+  <div class="item">
+  <img src="/assets/folder.png" alt="" />
+  <p>Folder${count}</p>
+  </div>`;
+  left.appendChild(item);
+  count++;
 });

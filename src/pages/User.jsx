@@ -15,7 +15,7 @@ const User = () => {
           {name}
         </h2>
       </div>
-      <div className="img w-[80%] mx-auto  h-152 my-10 rounded-md">
+      <div className="img w-[80%] md:w-[60%] mx-auto  h-152 lg:h-272 my-10 rounded-md">
         <img
           className="w-full h-full object-cover object-top rounded-md"
           src={`/${img}`}

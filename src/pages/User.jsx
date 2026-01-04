@@ -17,7 +17,7 @@ const User = () => {
       </div>
       <div className="img w-[80%] mx-auto  h-152 my-10 rounded-md">
         <img
-          className="w-full h-full object-cover rounded-md"
+          className="w-full h-full object-cover object-top rounded-md"
           src={`/${img}`}
           alt=""
         />

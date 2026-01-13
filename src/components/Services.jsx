@@ -9,7 +9,7 @@ export const Services = () => {
       <div className="services my-8 border border-gray-300 rounded-3xl py-10 px-6 mx-6 relative">
         <div className="top flex justify-between items-center mb-8">
           <h3 className="text-xl md:text-2xl lg:text-4xl">Our Services</h3>
-          <p className="text-gray-500 w-2/3 lg:w-1/2 text-center">
+          <p className="text-gray-500 w-2/3 lg:w-1/2 text-center text-xs md:text-base">
             Discover a wide range Of opportunities through a comprehensive range
             of qualified services
           </p>
@@ -29,7 +29,7 @@ export const Services = () => {
               </div>
             </div>
             <div className="line h-px bg-purple-600 w-full"></div>
-            <p className="text-gray-500 group-hover:text-white ">
+            <p className="text-gray-500 group-hover:text-white text-xs md:text-base ">
               Bring your ideas to life through dynamic visuals and engaging
               animations.{" "}
             </p>
@@ -58,7 +58,7 @@ export const Services = () => {
               </div>
             </div>
             <div className="line h-px bg-purple-600 w-full"></div>
-            <p className="text-gray-500 group-hover:text-white ">
+            <p className="text-gray-500 group-hover:text-white text-xs md:text-base">
               Turn imagination into reality with our stunning 2D/3D animations.
             </p>
             <div className="img w-full h-64  rounded-3xl group-hover:rounded-bl-[220px] transition-all duration-500">
@@ -86,7 +86,7 @@ export const Services = () => {
               </div>
             </div>
             <div className="line h-px bg-purple-600 w-full"></div>
-            <p className="text-gray-500 group-hover:text-white ">
+            <p className="text-gray-500 group-hover:text-white text-xs md:text-base">
               Shape a unique brand persona through our comprehensive Visual
               Identity solutions.
             </p>
@@ -127,7 +127,7 @@ export const Services = () => {
             </i>{" "}
             ABOUT ASTRATTO
           </h5>
-          <div className="text text-4xl lg:text-4xl xl:text-5xl lg:w-4/5 xl:w-2/3 mx-auto text-center my-4">
+          <div className="text text-xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-5xl lg:w-4/5 xl:w-2/3 mx-auto text-center my-4">
             <span>
               <img
                 className="w-12 inline-block"
@@ -151,8 +151,12 @@ export const Services = () => {
             </span>
           </div>
         </div>
-        <div className="img absolute bottom-10">
-          <img className="w-64 rotate-12" src="purple-line.png" alt="" />
+        <div className="img absolute bottom-10 ">
+          <img
+            className="w-28 sm:w-44 md:w-52 lg:w-64 xl:w-80 rotate-12"
+            src="purple-line.png"
+            alt=""
+          />
         </div>
       </div>
     </>

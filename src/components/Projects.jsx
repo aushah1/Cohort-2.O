@@ -6,12 +6,12 @@ const Projects = () => {
       <div className="projects px-8">
         <div className="top flex justify-between items-center mb-8">
           <h3 className="text-xl md:text-2xl lg:text-4xl">Recent Projects</h3>
-          <p className="text-gray-500 w-2/3 lg:w-1/2 text-start">
+          <p className="text-gray-500 w-2/3 lg:w-1/2 text-start text-xs md:text-base">
             Step into the world of our most recent projects, a showcase of our
             unwavering commitment to progressive design
           </p>
         </div>
-        <div className="flex items-start justify-center gap-8">
+        <div className="flex md:flex-row flex-col items-start justify-center gap-8">
           <div className="left flex items-center justify-center flex-col gap-10">
             <div className="card flex items-start justify-center flex-col gap-3">
               <div className="img cursor-pointer relative rounded-xl w-full h-96 lg:h-120 ">
@@ -28,7 +28,7 @@ const Projects = () => {
                 </div>
               </div>
               <h3 className="text-2xl text-[#b040b6]">The Lighthouse</h3>
-              <p className="text-gray-500 ">
+              <p className="text-gray-500 text-xs md:text-base">
                 Adding a new dimension to projects through thoughtfully designed
                 2D animations
               </p>
@@ -51,7 +51,7 @@ const Projects = () => {
               <h3 className="text-2xl text-[#b040b6]">
                 Navigating Possibilities
               </h3>
-              <p className="text-gray-500 ">
+              <p className="text-gray-500 text-xs md:text-base">
                 Motion graphics breathe life into the project. blending
                 direction and creativity
               </p>
@@ -73,7 +73,7 @@ const Projects = () => {
                 </div>
               </div>
               <h3 className="text-2xl text-[#b040b6]">Snowscape Haven</h3>
-              <p className="text-gray-500 ">
+              <p className="text-gray-500 text-xs md:text-base">
                 Crafting a v•jsual Identity that mtrrors the serenity and allure
                 Of a winter sanctuary
               </p>
@@ -93,7 +93,7 @@ const Projects = () => {
                 </div>
               </div>
               <h3 className="text-2xl text-[#b040b6]">Nocturnal Symphony</h3>
-              <p className="text-gray-500 ">
+              <p className="text-gray-500 text-xs md:text-base">
                 Through 3D artistry, we orchestrate an animated ode to the
                 evening. a dance Of shadows and dreams
               </p>

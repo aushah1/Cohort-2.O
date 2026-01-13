@@ -3,7 +3,7 @@ import React from "react";
 const Projects = () => {
   return (
     <>
-      <div className="projects px-8">
+      <div className="projects px-8 max-w-384 2xl:mx-auto">
         <div className="top flex justify-between items-center mb-8">
           <h3 className="text-xl md:text-2xl lg:text-4xl">Recent Projects</h3>
           <p className="text-gray-500 w-2/3 lg:w-1/2 text-start text-xs md:text-base">

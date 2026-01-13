@@ -6,7 +6,7 @@ import { TfiLayoutLineSolid } from "react-icons/tfi";
 export const Services = () => {
   return (
     <>
-      <div className="services my-8 border border-gray-300 rounded-3xl py-10 px-6 mx-6 relative">
+      <div className="services my-8 border border-gray-300 rounded-3xl py-10 px-6 mx-6 relative max-w-384 2xl:mx-auto">
         <div className="top flex justify-between items-center mb-8">
           <h3 className="text-xl md:text-2xl lg:text-4xl">Our Services</h3>
           <p className="text-gray-500 w-2/3 lg:w-1/2 text-center text-xs md:text-base">

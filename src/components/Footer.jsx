@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <footer className=" my-8  border border-gray-300 rounded-4xl py-10 px-6 mx-6 ">
+      <footer className=" my-8  border border-gray-300 rounded-4xl py-10 px-6 mx-6 max-w-384 2xl:mx-auto">
         <div className="text relative flex flex-col justify-center items-center gap-4  lg:w-4/5 xl:w-2/3 md:w-11/12 mx-auto text-center ">
           <p className="text-[#d835e0] text-base">
             Open the door to forging your brand's story

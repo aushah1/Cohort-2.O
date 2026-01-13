@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="hero relative min-h-[88vh]  flex flex-col items-center justify-center gap-4">
+      <div className="hero relative min-h-[88vh] max-w-423.25 mx-auto  flex flex-col items-center justify-center gap-4">
         <p className="text-gray-500 text-sm sm:text-base md:text-lg">
           Igniting the Spark Of Inspirations
         </p>

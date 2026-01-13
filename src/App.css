@@ -1,19 +1,1 @@
-@font-face {
-  font-family: Gessele;
-  src: url(/GesseleRegular-JR0m.ttf);
-}
-@font-face {
-  font-family: Neue;
-  src: url(/Neue\ Plak\ Condensed\ Bold.ttf);
-}
 @import "tailwindcss";
-
-nav .name h3 {
-  font-family: Gessele;
-}
-.title {
-  font-family: Neue;
-}
-.band {
-  font-family: Neue;
-}
